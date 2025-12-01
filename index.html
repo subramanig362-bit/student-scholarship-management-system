@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Scholarship Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <!-- Small leaf/student SVG icon -->
+      <svg class="logo" viewBox="0 0 64 64" width="42" height="42" aria-hidden>
+        <defs>
+          <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0" stop-color="#2ecc71"/>
+            <stop offset="1" stop-color="#16a085"/>
+          </linearGradient>
+        </defs>
+        <rect width="64" height="64" rx="10" fill="url(#g1)"></rect>
+        <g fill="#fff" transform="translate(8,8)">
+          <path d="M20 2c-6 0-11 5-11 11 0 9 11 19 11 19s11-10 11-19C31 7 26 2 20 2zm0 14.5A3.5 3.5 0 1 1 23.5 13 3.5 3.5 0 0 1 20 16.5z"></path>
+        </g>
+      </svg>
+      <div>
+        <h1>Scholarship System</h1>
+        <div class="tag">Student Scholarship Management</div>
+      </div>
+    </div>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html"><span class="nav-icon">🏠</span>Home</a>
+      <a href="apply.html"><span class="nav-icon">📝</span>Apply</a>
+      <a href="status.html"><span class="nav-icon">🔎</span>Status</a>
+      <a href="admin.html" class="cta"><span class="nav-icon">⚙️</span>Admin</a>
+    </nav>
+  </header>
+
+  <!-- large banner with subtle illustration (inline SVG) -->
+  <div class="hero">
+    <div class="hero-left">
+      <h2>Apply for scholarships easily</h2>
+      <p>Submit applications, track status, and let admins review — all in one simple system.</p>
+      <div class="hero-cta">
+        <a href="apply.html" class="btn">Apply Now</a>
+        <a href="status.html" class="btn btn-ghost">View Status</a>
+      </div>
+    </div>
+    <div class="hero-right" aria-hidden>
+      <!-- illustration (student with book) -->
+      <svg class="ill" viewBox="0 0 240 160" width="240" height="160">
+        <rect x="0" y="0" width="240" height="160" rx="12" fill="rgba(22,160,133,0.06)"/>
+        <g transform="translate(30,20)" fill="none" stroke="none">
+          <circle cx="60" cy="28" r="20" fill="#16a085"></circle>
+          <rect x="30" y="58" width="60" height="40" rx="6" fill="#2ecc71"></rect>
+          <path d="M98 56c0 0 18 0 30 12v10c0 6-6 12-12 12H70" fill="#fff" opacity="0.9"></path>
+          <g transform="translate(0,0)">
+            <rect x="6" y="104" width="116" height="10" rx="5" fill="#10ac84"></rect>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <main class="container">
+    <section class="info-card">
+      <h3>How it works</h3>
+      <ol>
+        <li>Create an application on <strong>Apply</strong> page.</li>
+        <li>Check progress on <strong>Status</strong> page with your register number.</li>
+        <li>Admin can review and manage applications on the <strong>Admin</strong> page.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© <span id="year"></span> RMK College — Student Scholarship Management - Subramani G</div>
+  </footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

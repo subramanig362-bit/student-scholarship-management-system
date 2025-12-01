@@ -1,0 +1,145 @@
+/* Simple green & white theme with subtle background pattern */
+
+/* Background pattern (SVG data URI) */
+:root{
+  --green1:#16a085;
+  --green2:#2ecc71;
+  --muted:#6b7280;
+  --card:#ffffff;
+}
+
+/* subtle pattern using data URI */
+body{
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  margin:0;
+  background-color:#f6fbf9;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><g fill='%23e8f6f1' fill-opacity='0.6'><circle cx='20' cy='20' r='2'/><circle cx='100' cy='30' r='2'/><circle cx='60' cy='100' r='2'/></g></svg>");
+  color:#123;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* header */
+.site-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 28px;
+  background:linear-gradient(90deg,var(--green2),var(--green1));
+  color:white;
+  box-shadow:0 6px 18px rgba(6,46,37,0.08);
+}
+
+.brand{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+.logo{ border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); }
+
+.site-header h1{ font-size:20px; margin:0; font-weight:600; }
+.tag{ font-size:12px; opacity:0.95; margin-top:4px; }
+
+/* nav */
+.main-nav{ display:flex; gap:12px; align-items:center; }
+.main-nav a{
+  color:white;
+  text-decoration:none;
+  padding:8px 12px;
+  border-radius:8px;
+  font-weight:500;
+  font-size:14px;
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+}
+.main-nav a:hover{ background:rgba(255,255,255,0.12); }
+.main-nav a.cta{
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+/* container & grids */
+.container{ max-width:980px; margin:28px auto; padding:0 16px; }
+.hero{ display:flex; gap:22px; align-items:center; justify-content:space-between; max-width:980px; margin:20px auto; padding:10px 16px; }
+.hero-left{ flex:1; }
+.hero-right{ width:260px; display:flex; align-items:center; justify-content:center; }
+
+/* hero text */
+.hero h2{ margin:0 0 8px 0; font-size:24px; color:#042; }
+.hero p{ color:var(--muted); margin:0 0 12px 0; }
+
+/* buttons */
+.btn{
+  background:var(--green1);
+  color:white;
+  padding:10px 14px;
+  border-radius:8px;
+  text-decoration:none;
+  display:inline-block;
+  border:none;
+  font-size:14px;
+  cursor:pointer;
+}
+.btn-ghost{
+  background:transparent;
+  color:var(--green1);
+  border:1px solid rgba(18,52,46,0.08);
+}
+.btn:hover{ transform:translateY(-1px); box-shadow:0 6px 18px rgba(18,52,46,0.06); }
+
+/* section cards */
+.section{
+  background:var(--card);
+  border-radius:12px;
+  padding:20px;
+  box-shadow:0 8px 20px rgba(6,46,37,0.04);
+}
+
+/* two-column layout for apply page */
+.two-col{ display:grid; grid-template-columns:1fr 320px; gap:18px; align-items:start; }
+
+/* form */
+form{ display:flex; flex-direction:column; gap:10px; }
+label{ font-weight:600; font-size:13px; color:#183; }
+input, textarea{
+  padding:10px; border-radius:8px; border:1px solid #e4efe9; font-size:14px;
+  background:linear-gradient(180deg,#fff,#fbfffb);
+}
+input:focus, textarea:focus{ outline:none; border-color:var(--green1); box-shadow:0 6px 18px rgba(22,160,133,0.06); }
+
+/* form actions */
+.form-actions{ display:flex; gap:10px; margin-top:6px; }
+
+/* aside art */
+.aside-art{ text-align:center; }
+.illustration{ margin-bottom:12px; }
+
+/* small muted text */
+.muted{ color:var(--muted); margin-top:8px; }
+
+/* admin cards */
+.card{
+  background:linear-gradient(180deg,#fff,#fcfffd);
+  border-radius:10px;
+  padding:14px;
+  margin-bottom:12px;
+  border-left:6px solid var(--green1);
+  box-shadow:0 6px 18px rgba(6,46,37,0.04);
+}
+.card p{ margin:4px 0; }
+
+/* export / clear btns */
+.btn-ghost{ background:transparent; color:var(--green1); border:1px solid rgba(16,128,102,0.08); padding:8px 12px; }
+
+/* footer */
+.site-footer{ text-align:center; padding:18px; color:var(--muted); font-size:13px; margin-top:18px; }
+
+/* responsive */
+@media (max-width:860px){
+  .two-col{ grid-template-columns:1fr; }
+  .hero{ flex-direction:column; gap:12px; align-items:flex-start; }
+  .hero-right{ width:100%; justify-content:flex-start; }
+  .main-nav{ gap:8px; }
+}

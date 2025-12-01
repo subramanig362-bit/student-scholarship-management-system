@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Apply — Scholarship</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 64 64" width="36" height="36" aria-hidden>
+        <rect width="64" height="64" rx="10" fill="#16a085"></rect>
+        <g fill="#fff" transform="translate(8,8)">
+          <path d="M20 2c-6 0-11 5-11 11 0 9 11 19 11 19s11-10 11-19C31 7 26 2 20 2zm0 14.5A3.5 3.5 0 1 1 23.5 13 3.5 3.5 0 0 1 20 16.5z"></path>
+        </g>
+      </svg>
+      <div>
+        <h1>Scholarship System</h1>
+        <div class="tag">Apply for scholarships</div>
+      </div>
+    </div>
+
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="apply.html" class="active">Apply</a>
+      <a href="status.html">Status</a>
+      <a href="admin.html" class="cta">Admin</a>
+    </nav>
+  </header>
+
+  <main class="container two-col">
+    <section class="section form-panel">
+      <h2>Application Form</h2>
+
+      <form id="applyForm" autocomplete="off">
+        <label for="name">Full name</label>
+        <input id="name" name="name" required />
+
+        <label for="reg">Register number</label>
+        <input id="reg" name="reg" required />
+
+        <label for="dept">Department</label>
+        <input id="dept" name="dept" required />
+
+        <label for="income">Annual family income (₹)</label>
+        <input id="income" name="income" type="number" min="0" />
+
+        <label for="reason">Reason / Statement</label>
+        <textarea id="reason" name="reason" rows="4"></textarea>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Submit Application</button>
+          <button type="button" id="clearBtn" class="btn btn-ghost">Clear</button>
+        </div>
+
+        <p id="applyMsg" class="muted"></p>
+      </form>
+    </section>
+
+    <aside class="section aside-art">
+      <!-- Illustration + short instructions -->
+      <div class="illustration">
+        <svg viewBox="0 0 160 160" width="160" height="160" aria-hidden>
+          <rect width="160" height="160" rx="14" fill="#e9faf4"></rect>
+          <g transform="translate(20,24)">
+            <circle cx="40" cy="18" r="14" fill="#16a085"></circle>
+            <rect x="8" y="46" width="64" height="34" rx="8" fill="#2ecc71"></rect>
+            <rect x="0" y="86" width="80" height="6" rx="3" fill="#10ac84"></rect>
+          </g>
+        </svg>
+      </div>
+
+      <h3>Tips for application</h3>
+      <ul>
+        <li>Use your official register number.</li>
+        <li>Enter clear reason & supporting details.</li>
+        <li>Keep income accurate.</li>
+      </ul>
+    </aside>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
